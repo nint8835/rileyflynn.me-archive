@@ -1,0 +1,66 @@
+[
+    {
+        "slug": "2017",
+        "current": false,
+        "archived": true,
+
+        "start": "2017-04-05",
+        "end": "2017-12-25"
+    }, 
+    {
+        "slug": "2017-bulma",
+        "current": false,
+        "archived": true,
+
+        "start": "2017-12-25",
+        "end": "2018-12-06"
+    }, 
+    {
+        "slug": "2018",
+        "current": false,
+        "archived": true,
+
+        "start": "2018-12-06",
+        "end": "2019-06-02"
+    },
+    {
+        "slug": "2019",
+        "current": false,
+        "archived": false,
+
+        "start": "2019-06-02",
+        "end": "2020-08-03"
+    },
+    {
+        "slug": "2020",
+        "current": false,
+        "archived": true,
+
+        "start": "2020-08-03",
+        "end": "2021-01-29"
+    },
+    {
+        "slug": "2021",
+        "current": false,
+        "archived": true,
+
+        "start": "2021-01-29",
+        "end": "2022-07-23"
+    },
+    {
+        "slug": "2022",
+        "current": false,
+        "archived": true,
+
+        "start": "2022-07-23",
+        "end": "2023-06-01"
+    },
+    {
+        "slug": "2023",
+        "current": true,
+        "archived": false,
+
+        "start": "2023-06-01",
+        "end": null
+    }
+]

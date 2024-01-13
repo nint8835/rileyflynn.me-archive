@@ -96,7 +96,7 @@ const PlaygroundPage: FunctionComponent<PageProps> = ({}) => {
   return (
     <Page
       description={"Playground for terraform-provider-gatsby"}
-      path={"playground"}
+      path={"/playground"}
       title={"playground.tf"}
       excludeEditor={width > 768}
     >

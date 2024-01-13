@@ -25,7 +25,7 @@ const Meta = ({ title, metaIncludesTitle, categoryTitle, description }: MetaProp
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="og:type" content="website" />
             <meta name="og:site_name" content="Riley Flynn" />
-            <meta name="og:url" content={`https://rileyflynn.com${location.pathname}`} />
+            <meta name="og:url" content={`https://archives.rileyflynn.com${location.pathname}`} />
             <meta name="twitter:card" content="summary" />
             <meta name="twitter:creator" content="@bootlegjohn" />
 

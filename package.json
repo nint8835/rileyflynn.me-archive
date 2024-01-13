@@ -10,7 +10,7 @@
     "scripts": {
         "develop": "gatsby develop",
         "start": "gatsby develop",
-        "build": "gatsby build && rsync -a public/ dist/",
+        "build": "gatsby build --prefix-paths && rsync -a public/ dist/",
         "serve": "gatsby serve",
         "clean": "gatsby clean",
         "typecheck": "tsc --noEmit"

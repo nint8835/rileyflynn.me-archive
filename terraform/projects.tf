@@ -92,7 +92,7 @@ resource "gatsby_text_image" "project_image" {
   for_each = local.projects
 
   alt_text = each.value.name
-  path     = "/images/projects/${each.value.name}.png"
+  path     = "/2020/images/projects/${each.value.name}.png"
 }
 
 resource "gatsby_text_heading" "project_heading" {

@@ -6,6 +6,7 @@ provider "registry.terraform.io/nint8835/gatsby" {
   constraints = "1.0.0"
   hashes = [
     "h1:3vz2MGhAjkW18ITUg3koD73C9RwW+ooVQ1pwJOE48c0=",
+    "h1:Y8/oyQJ+/2ZSH1e/H+vOIusPzUFh759QVTgEDI3sXm0=",
     "zh:0dc80ac43c593e0e60bd09632fec981a3308dcfb43d86d9a185449efe9589d38",
     "zh:1587a5c3d11f24c6cc16103b78c6e5a15e743832d16404a5ac5281d6f235d657",
     "zh:3635bcf8c4fb42d1ed9a53d41fec2cd441071fe6afe3cb96ab4c0078889daf88",

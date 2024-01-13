@@ -82,12 +82,12 @@ resource "gatsby_text_list" "role_subtitle" {
 
 resource "gatsby_text_image" "colab" {
   alt_text = "CoLab Software"
-  path     = "/images/work/colab-software.png"
+  path     = "/2021/images/work/colab-software.png"
 }
 
 resource "gatsby_text_image" "mun" {
   alt_text = "Memorial University of Newfoundland"
-  path     = "/images/work/memorial-university-of-newfoundland.png"
+  path     = "/2021/images/work/memorial-university-of-newfoundland.png"
 }
 
 resource "gatsby_text_heading" "colab" {

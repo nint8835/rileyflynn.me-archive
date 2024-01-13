@@ -5,11 +5,12 @@
  */
 
 module.exports = {
+  pathPrefix: "/2021",
   siteMetadata: {
     title: "Riley Flynn",
     titleTemplate: "%s - rileyflynn.me",
     description: "Full Stack Developer for CoLab Software",
-    siteUrl: "https://rileyflynn.me",
+    siteUrl: "https://archives.rileyflynn.me/2021",
     image: "/images/st_johns.jpg",
     twitterUsername: "@BootlegJohn",
   },

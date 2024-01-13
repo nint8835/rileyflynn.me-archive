@@ -14,12 +14,12 @@ const Head: FunctionComponent<HeadProps> = ({ title, description, path }) => (
     <meta name="image" content={`screenshots/${title}.png`} />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={"https://rileyflynn.me" + path + "/"} />
+    <meta property="og:url" content={"https://archives.rileyflynn.me/2021" + path + "/"} />
     <meta property="og:title" content={title + " - rileyflynn.me"} />
     <meta property="og:description" content={description} />
     <meta
       property="og:image"
-      content={`https://rileyflynn.me/screenshots/${title}.png`}
+      content={`https://archives.rileyflynn.me/2021/screenshots/${title}.png`}
     />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -28,7 +28,7 @@ const Head: FunctionComponent<HeadProps> = ({ title, description, path }) => (
     <meta name="twitter:description" content={description} />
     <meta
       name="twitter:image"
-      content={`https://rileyflynn.me/screenshots/${title}.png`}
+      content={`https://archives.rileyflynn.me/2021/screenshots/${title}.png`}
     />
   </Helmet>
 );

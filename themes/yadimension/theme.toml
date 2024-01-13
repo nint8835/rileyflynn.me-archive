@@ -1,0 +1,24 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/spf13/hugoThemes#themetoml for an example
+
+name = "Yet Another Dimension"
+license = "Creative Commons Attribution 3.0 Unported"
+licenselink = "https://github.com/erizcolf/yadimension/blob/master/LICENSE.md"
+description = "YaDimension is a single page and responsive site template using modals as pages."
+homepage = "https://github.com/ericzolf/yadimension"
+tags = ["responsive", "personal", "portfolio", "multilingual"]
+features = ["responsive", "multilingual"]
+min_version = 0.18
+
+[author]
+  name = "Eric Lavarde"
+  homepage = "https://eric.lavar.de/"
+# Formerly:
+#  name = "Seth MacLeod"
+#  homepage = "https://www.sethmacleod.com/"
+
+# If porting an existing theme
+[original]
+  name = "@ajlkn"
+  homepage = "https://html5up.net/dimension"
+  repo = ""

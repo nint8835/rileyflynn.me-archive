@@ -5,6 +5,7 @@
  */
 
 module.exports = {
+  pathPrefix: "/2020",
   siteMetadata: {
     title: "Riley Flynn",
     titleTemplate: "%s - rileyflynn.me",

@@ -10,7 +10,7 @@ module.exports = {
     titleTemplate: "%s - rileyflynn.me",
     description:
       "Full Stack Developer for CoLab Software",
-    siteUrl: "https://rileyflynn.me",
+    siteUrl: "https://archives.rileyflynn.me/2020",
     image: "/images/st_johns.jpg",
     twitterUsername: "@BootlegJohn"
   },

@@ -69,6 +69,6 @@ yarn-error.log
 .yarn-integrity
 
 .terraform/
-terraform.tfstate
+# terraform.tfstate
 terraform.tfstate.backup
 terraform-provider-gatsby

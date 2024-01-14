@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      body {
+        margin: 0;
+        background-color: #171720;
+        color: #d9d9d9;
+
+        font-family: sans-serif;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: inherit;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .version-list {
+        padding: 4rem;
+      }
+
+      .unarchived-version {
+        font-style: italic;
+        text-decoration: line-through;
+        color: #707070;
+      }
+
+      .current-label {
+        font-weight: 200;
+        font-style: italic;
+        color: #707070;
+      }
+    </style>
+
+    <title>archives - rileyflynn.me</title>
+  </head>
+
+  <body>
+    <div
+      x-data="{ versions: [] }"
+      x-init="versions = await (await fetch('/versions.json')).json()"
+      class="version-list"
+    >
+      <template x-for="version in versions">
+        <div>
+          <h1
+            :class="!version.archived && !version.current && 'unarchived-version'"
+          >
+            <a
+              :href="'/' + version.slug"
+              x-text="version.slug"
+              x-show="version.archived"
+            ></a>
+            <a
+              x-text="version.slug"
+              x-show="!version.archived && version.current"
+              href="https://rileyflynn.me"
+            ></a>
+            <span
+              x-text="version.slug"
+              x-show="!version.archived && !version.current"
+            ></span>
+            <span x-show="version.current" class="current-label">
+              (current)
+            </span>
+          </h1>
+        </div>
+      </template>
+    </div>
+  </body>
+</html>

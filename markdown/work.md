@@ -6,7 +6,7 @@ description: "Jobs I've had"
 hidden: false
 ---
 
-![CoLab Software](/images/work/colab-software.png)
+![CoLab Software](/2019/images/work/colab-software.png)
 
 ## CoLab Software
 
@@ -22,7 +22,7 @@ Responsible for working on many aspects of CoLab, a cloud-based design review an
 
 ---
 
-![Memorial University of Newfoundland](/images/work/memorial-university-of-newfoundland.png)
+![Memorial University of Newfoundland](/2019/images/work/memorial-university-of-newfoundland.png)
 
 ## Memorial University of Newfoundland
 
@@ -52,7 +52,7 @@ Technologies used:
 
 ---
 
-![Hickman Chevrolet Cadillac](/images/work/hickman-chevrolet-cadillac.jpg)
+![Hickman Chevrolet Cadillac](/2019/images/work/hickman-chevrolet-cadillac.jpg)
 
 ## Hickman Chevrolet Cadillac
 

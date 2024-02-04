@@ -6,7 +6,7 @@ description: "Projects that I have worked on"
 hidden: false
 ---
 
-![iTunesRichPresence](/images/projects/iTunesRichPresence.png)
+![iTunesRichPresence](/2019/images/projects/iTunesRichPresence.png)
 
 ## iTunesRichPresence
 
@@ -16,7 +16,7 @@ Utilizes the iTunes COM interface and Discord's RPC and Rich Presence APIs to sh
 
 ---
 
-![Chainmail](/images/projects/Chainmail.png)
+![Chainmail](/2019/images/projects/Chainmail.png)
 
 ## Chainmail
 
@@ -26,7 +26,7 @@ Wraps around the vanilla Minecraft server, intercepting output and injecting inp
 
 ---
 
-![SchoolTracker](/images/projects/SchoolTracker.png)
+![SchoolTracker](/2019/images/projects/SchoolTracker.png)
 
 ## SchoolTracker
 
@@ -36,7 +36,7 @@ Scrapes the NLESD Status Central website to keep track of the status for various
 
 ---
 
-![InvitationASM](/images/projects/InvitationASM.png)
+![InvitationASM](/2019/images/projects/InvitationASM.png)
 
 ## InvitationASM
 
@@ -46,7 +46,7 @@ Interpreter for the assembly-styled language used to teach machine code and asse
 
 ---
 
-![Jigsaw](/images/projects/Jigsaw.png)
+![Jigsaw](/2019/images/projects/Jigsaw.png)
 
 ## Jigsaw
 
@@ -56,7 +56,7 @@ Easy to use library for adding plugin functionality to Python projects. Used to 
 
 ---
 
-![NintbotForDiscord](/images/projects/NintbotForDiscord.png)
+![NintbotForDiscord](/2019/images/projects/NintbotForDiscord.png)
 
 ## NintbotForDiscord
 
@@ -66,7 +66,7 @@ One of the very first modular bot frameworks for Discord.
 
 ---
 
-![WebRichPresence](/images/projects/WebRichPresence.png)
+![WebRichPresence](/2019/images/projects/WebRichPresence.png)
 
 ## WebRichPresence
 
@@ -76,7 +76,7 @@ Web API for controlling the Discord Rich Presence status for clients remotely. C
 
 ---
 
-![Automata](/images/projects/Automata.png)
+![Automata](/2019/images/projects/Automata.png)
 
 ## Automata
 

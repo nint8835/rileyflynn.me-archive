@@ -4,7 +4,7 @@ import { getProject } from '@theatre/core';
 import { SheetProvider, editable as e } from '@theatre/r3f';
 import extension from '@theatre/r3f/dist/extension';
 import studio from '@theatre/studio';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { SpotLight, SpotLightHelper } from 'three';
 
@@ -29,6 +29,18 @@ function Scene() {
 
         setIntensity((prev) => Math.min(prev + 0.05, 2));
     });
+
+    useEffect(() => {
+        const contentDiv = document.getElementById('content')!;
+        sheet.sequence.position = contentDiv.scrollTop / window.innerHeight;
+
+        function handleScroll() {
+            sheet.sequence.position = contentDiv.scrollTop / window.innerHeight;
+        }
+
+        contentDiv.addEventListener('scroll', handleScroll);
+        return () => contentDiv.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
         <SheetProvider sheet={sheet}>

@@ -32,6 +32,11 @@ function Scene() {
 
     useEffect(() => {
         const contentDiv = document.getElementById('content')!;
+
+        if (contentDiv === null) {
+            return;
+        }
+
         sheet.sequence.position = contentDiv.scrollTop / window.innerHeight;
 
         function handleScroll() {

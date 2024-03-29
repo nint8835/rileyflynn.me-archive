@@ -1,7 +1,12 @@
 ---
-import { Scene } from './scene';
+import { BackgroundCanvas } from './scene';
 ---
 
 <div class="absolute -z-10 h-screen w-full bg-black">
-    <Scene client:only />
+    <div class="flex h-screen snap-start flex-row p-4 md:p-16">
+        <div class="hidden flex-1 md:flex"></div>
+        <div class="flex flex-1 items-center">
+            <BackgroundCanvas client:only />
+        </div>
+    </div>
 </div>

@@ -1,10 +1,10 @@
-import { CameraControls, Center, PerspectiveCamera, useHelper } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
+import { Center, useHelper } from '@react-three/drei';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { getProject } from '@theatre/core';
 import { SheetProvider, editable as e } from '@theatre/r3f';
 import extension from '@theatre/r3f/dist/extension';
 import studio from '@theatre/studio';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import * as THREE from 'three';
 import { SpotLight, SpotLightHelper } from 'three';
 
@@ -15,50 +15,53 @@ if (import.meta.env.DEV) {
 
 const sheet = getProject('rileyflynn.me').sheet('home');
 
-function TestScene({
-    canvasRef,
-    cameraRef,
-}: {
-    canvasRef: React.RefObject<HTMLCanvasElement>;
-    cameraRef: React.RefObject<THREE.PerspectiveCamera>;
-}) {
+function Scene() {
     const lightRef = useRef<SpotLight>();
     useHelper(lightRef, SpotLightHelper);
     const meshRef = useRef<THREE.Mesh>();
+
+    const [intensity, setIntensity] = useState(0);
+
+    useFrame(() => {
+        if (intensity === 2) {
+            return;
+        }
+
+        setIntensity((prev) => Math.min(prev + 0.05, 2));
+    });
 
     return (
         <SheetProvider sheet={sheet}>
             <e.spotLight
                 position={[5, 3, 0]}
-                scale={[1, 0.8, 1]}
+                scale={[1, 1, 1]}
                 theatreKey="test"
                 castShadow
                 ref={lightRef}
                 target={meshRef.current}
-                intensity={2}
+                intensity={intensity}
                 penumbra={1}
                 angle={0.25}
             />
+
             <Center>
-                <mesh castShadow ref={meshRef}>
+                <e.mesh theatreKey="cube" castShadow ref={meshRef}>
                     <boxGeometry args={[1, 1, 1]} />
                     <meshStandardMaterial color="orange" />
-                </mesh>
+                </e.mesh>
             </Center>
             <e.mesh theatreKey="floor" position={[0, -0.5, 0]} receiveShadow>
                 <boxGeometry args={[10, 0.1, 10]} />
-                <meshStandardMaterial color="grey" />
+                <meshStandardMaterial color="#303030" />
             </e.mesh>
         </SheetProvider>
     );
 }
 
-export function Scene() {
+export function BackgroundCanvas() {
     return (
-        <Canvas shadows>
-            <CameraControls makeDefault />
-            <PerspectiveCamera makeDefault position={[5, 10, 0]} />
-            <TestScene />
+        <Canvas shadows camera={{ position: [2.5, 1.5, -1.5] }}>
+            <Scene />
         </Canvas>
     );
 }

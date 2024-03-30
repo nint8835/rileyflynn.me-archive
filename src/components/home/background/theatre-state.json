@@ -1,0 +1,70 @@
+{
+    "sheetsById": {
+        "home": {
+            "staticOverrides": {
+                "byObject": {}
+            },
+            "sequence": {
+                "subUnitsPerUnit": 30,
+                "length": 10,
+                "type": "PositionalSequence",
+                "tracksByObject": {
+                    "cube": {
+                        "trackData": {
+                            "GK8V9IENIy": {
+                                "type": "BasicKeyframedTrack",
+                                "__debugName": "cube:[\"scale\",\"x\"]",
+                                "keyframes": [
+                                    {
+                                        "id": "NeSTvR2aEF",
+                                        "position": 0,
+                                        "connectedRight": true,
+                                        "handles": [0.5, 1, 0.68, -0.55],
+                                        "type": "bezier",
+                                        "value": 1
+                                    },
+                                    {
+                                        "id": "mt9wTkmV7O",
+                                        "position": 1,
+                                        "connectedRight": true,
+                                        "handles": [0.265, 1.55, 0.5, 0],
+                                        "type": "bezier",
+                                        "value": 2.999999999999979
+                                    }
+                                ]
+                            },
+                            "CvX4_aqFnv": {
+                                "type": "BasicKeyframedTrack",
+                                "__debugName": "cube:[\"scale\",\"z\"]",
+                                "keyframes": [
+                                    {
+                                        "id": "vpVYNXkG-q",
+                                        "position": 0,
+                                        "connectedRight": true,
+                                        "handles": [0.5, 1, 0.68, -0.55],
+                                        "type": "bezier",
+                                        "value": 1
+                                    },
+                                    {
+                                        "id": "nIvm4CxPWl",
+                                        "position": 1,
+                                        "connectedRight": true,
+                                        "handles": [0.265, 1.55, 0.5, 0],
+                                        "type": "bezier",
+                                        "value": 2.999999999999993
+                                    }
+                                ]
+                            }
+                        },
+                        "trackIdByPropPath": {
+                            "[\"scale\",\"x\"]": "GK8V9IENIy",
+                            "[\"scale\",\"z\"]": "CvX4_aqFnv"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitionVersion": "0.4.0",
+    "revisionHistory": ["gXVrdTovBliGyCV0"]
+}

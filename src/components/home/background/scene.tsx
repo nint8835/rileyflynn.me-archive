@@ -7,13 +7,14 @@ import studio from '@theatre/studio';
 import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { SpotLight, SpotLightHelper } from 'three';
+import state from './theatre-state.json';
 
 if (import.meta.env.DEV) {
     studio.initialize();
     studio.extend(extension);
 }
 
-const sheet = getProject('rileyflynn.me').sheet('home');
+const sheet = getProject('rileyflynn.me', { state }).sheet('home');
 
 function Scene() {
     const lightRef = useRef<SpotLight>();

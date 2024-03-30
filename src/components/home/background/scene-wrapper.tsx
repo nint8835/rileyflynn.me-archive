@@ -25,13 +25,19 @@ export function SceneWrapper() {
                 <div className="h-screen bg-black"></div>
                 <div className="h-screen bg-blue-500"></div>
             </Transition>
-            {showBackgroundCanvas && (
-                <div className="fixed left-0 top-0 -z-20 h-screen w-full">
+
+            <div className="fixed left-0 top-0 -z-20 h-screen w-full bg-black">
+                {showBackgroundCanvas && (
                     <Suspense>
-                        <BackgroundCanvas />
+                        <div className="flex h-full w-full flex-row">
+                            <div className="flex-1"></div>
+                            <div className="flex-1">
+                                <BackgroundCanvas />
+                            </div>
+                        </div>
                     </Suspense>
-                </div>
-            )}
+                )}
+            </div>
         </>
     );
 }

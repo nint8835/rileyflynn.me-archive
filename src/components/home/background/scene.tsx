@@ -17,6 +17,7 @@ const sheet = getProject('rileyflynn.me').sheet('home');
 
 function Scene() {
     const lightRef = useRef<SpotLight>();
+    // @ts-ignore
     useHelper(lightRef, SpotLightHelper);
     const meshRef = useRef<THREE.Mesh>();
 
@@ -54,6 +55,7 @@ function Scene() {
                 scale={[1, 1, 1]}
                 theatreKey="test"
                 castShadow
+                // @ts-ignore
                 ref={lightRef}
                 target={meshRef.current}
                 intensity={intensity}
@@ -62,6 +64,7 @@ function Scene() {
             />
 
             <Center>
+                {/* @ts-ignore */}
                 <e.mesh theatreKey="cube" castShadow ref={meshRef}>
                     <boxGeometry args={[1, 1, 1]} />
                     <meshStandardMaterial color="orange" />
@@ -75,7 +78,7 @@ function Scene() {
     );
 }
 
-export function BackgroundCanvas() {
+export default function BackgroundCanvas() {
     return (
         <Canvas shadows camera={{ position: [2.5, 1.5, -1.5] }}>
             <Scene />

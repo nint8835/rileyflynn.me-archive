@@ -1,12 +1,12 @@
 ---
-import { BackgroundCanvas } from './scene';
+import { SceneWrapper } from './scene-wrapper';
 ---
 
 <div class="absolute -z-10 h-screen w-full bg-black">
     <div class="flex h-screen snap-start flex-row">
         <div class="hidden flex-1 md:flex"></div>
         <div class="flex flex-1 items-center">
-            <BackgroundCanvas client:only />
+            <SceneWrapper client:only="react" />
         </div>
     </div>
 </div>

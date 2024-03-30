@@ -26,7 +26,7 @@ export function SceneWrapper() {
                 <div className="h-screen bg-blue-500"></div>
             </Transition>
             {showBackgroundCanvas && (
-                <div className="absolute -z-20 h-screen w-full">
+                <div className="fixed left-0 top-0 -z-20 h-screen w-full">
                     <Suspense>
                         <BackgroundCanvas />
                     </Suspense>

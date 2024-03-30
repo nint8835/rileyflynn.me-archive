@@ -1,18 +1,37 @@
+import { Transition } from '@headlessui/react';
 import { useMediaQuery } from '@uidotdev/usehooks';
-import React, { Suspense } from 'react';
+import { Suspense, lazy, useState } from 'react';
 
-const BackgroundCanvas = React.lazy(() => import('./scene'));
+const BackgroundCanvas = lazy(() => import('./scene'));
 
 export function SceneWrapper() {
     const isSmallDevice = useMediaQuery('(max-width: 640px)');
-
-    if (isSmallDevice) {
-        return null;
-    }
+    const [showBackgroundCanvas, setShowBackgroundCanvas] = useState(!isSmallDevice);
 
     return (
-        <Suspense>
-            <BackgroundCanvas />
-        </Suspense>
+        <>
+            <Transition
+                show={isSmallDevice}
+                afterEnter={() => setShowBackgroundCanvas(false)}
+                afterLeave={() => setShowBackgroundCanvas(true)}
+                enter="transition-opacity duration-150"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="transition-opacity duration-150"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+                className="absolute left-0 top-0 -z-10 w-full"
+            >
+                <div className="h-screen bg-black"></div>
+                <div className="h-screen bg-blue-500"></div>
+            </Transition>
+            {showBackgroundCanvas && (
+                <div className="absolute -z-20 h-screen w-full">
+                    <Suspense>
+                        <BackgroundCanvas />
+                    </Suspense>
+                </div>
+            )}
+        </>
     );
 }

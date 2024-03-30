@@ -1,6 +1,6 @@
 ---
 import '@fontsource-variable/brygada-1918';
-import Background from '../components/home/background/background.astro';
+import { SceneWrapper } from '../components/home/background/scene-wrapper';
 import Section from '../components/home/section.astro';
 ---
 
@@ -13,8 +13,8 @@ import Section from '../components/home/section.astro';
         <title>rileyflynn.me</title>
     </head>
     <body class="font-serif text-zinc-300">
-        <Background />
         <div class="h-screen snap-y snap-mandatory snap-always overflow-auto scroll-smooth" id="content">
+            <SceneWrapper client:only="react" />
             <Section>
                 <h1 class="text-8xl font-semibold">Riley Flynn</h1>
                 <div>Cloud Developer</div>

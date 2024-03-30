@@ -1,6 +1,6 @@
 ---
 import '@fontsource-variable/brygada-1918';
-import Background from '../components/home/background/background.astro';
+import { SceneWrapper } from '../components/home/background/scene-wrapper';
 ---
 
 <html lang="en">
@@ -12,6 +12,6 @@ import Background from '../components/home/background/background.astro';
         <title>rileyflynn.me</title>
     </head>
     <body class="font-serif text-zinc-300">
-        <Background />
+        <SceneWrapper client:only="react" />
     </body>
 </html>

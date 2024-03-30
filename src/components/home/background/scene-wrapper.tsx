@@ -14,10 +14,10 @@ export function SceneWrapper() {
                 show={isSmallDevice}
                 afterEnter={() => setShowBackgroundCanvas(false)}
                 afterLeave={() => setShowBackgroundCanvas(true)}
-                enter="transition-opacity duration-150"
+                enter="transition-opacity duration-300"
                 enterFrom="opacity-0"
                 enterTo="opacity-100"
-                leave="transition-opacity duration-150"
+                leave="transition-opacity duration-300"
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
                 className="absolute left-0 top-0 -z-10 w-full"

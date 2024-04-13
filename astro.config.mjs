@@ -7,4 +7,5 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
     integrations: [tailwind(), metaTags(), react()],
+    base: '/2024-3d',
 });

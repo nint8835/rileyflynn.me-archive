@@ -40,7 +40,7 @@
         color: #707070;
       }
 
-      .current-label {
+      .label {
         font-weight: 200;
         font-style: italic;
         color: #707070;
@@ -75,9 +75,10 @@
               x-text="version.slug"
               x-show="!version.archived && !version.current"
             ></span>
-            <span x-show="version.current" class="current-label">
+            <span x-show="version.current" class="label">
               (current)
             </span>
+            <span x-show="version.start === null" class="label">(unreleased)</span>
           </h1>
         </div>
       </template>

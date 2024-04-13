@@ -62,5 +62,13 @@
 
         "start": "2023-06-01",
         "end": null
+    },
+    {
+        "slug": "2024-3d",
+        "current": false,
+        "archived": true,
+
+        "start": null,
+        "end": null
     }
 ]

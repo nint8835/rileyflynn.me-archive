@@ -1,4 +1,4 @@
-import { Center, useHelper } from '@react-three/drei';
+import { Center } from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { getProject } from '@theatre/core';
 import { SheetProvider, editable as e } from '@theatre/r3f';
@@ -6,7 +6,6 @@ import extension from '@theatre/r3f/dist/extension';
 import studio from '@theatre/studio';
 import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
-import { SpotLight, SpotLightHelper } from 'three';
 import state from './theatre-state.json';
 
 if (import.meta.env.DEV) {
@@ -17,9 +16,6 @@ if (import.meta.env.DEV) {
 const sheet = getProject('rileyflynn.me', { state }).sheet('home');
 
 function Scene() {
-    const lightRef = useRef<SpotLight>();
-    // @ts-ignore
-    useHelper(lightRef, SpotLightHelper);
     const meshRef = useRef<THREE.Mesh>();
 
     const [intensity, setIntensity] = useState(0);
@@ -56,8 +52,6 @@ function Scene() {
                 scale={[1, 1, 1]}
                 theatreKey="test"
                 castShadow
-                // @ts-ignore
-                ref={lightRef}
                 target={meshRef.current}
                 intensity={intensity}
                 penumbra={1}
